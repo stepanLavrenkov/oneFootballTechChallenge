@@ -19,7 +19,7 @@ export default class Generator {
     this.fileContent += this.getDefaultData();
 
     this.generateDefinitions();
-    this.wrinteFile();
+    this.writeFile();
   }
 
   private generateDefinitions() {
@@ -45,7 +45,7 @@ export default class Generator {
     }
   }
 
-  private wrinteFile() {
+  private writeFile() {
     fs.writeFileSync(this.filePath, this.fileContent);
   }
 

@@ -19,7 +19,7 @@ export default class AbstractApi<inputModel, responseModel> {
       .catch((err) => {
         const expectedErrorStatusCodes = [400, 404];
 
-        if (expectedErrorStatusCodes.includes(err.response.data.code)) {
+        if (expectedErrorStatusCodes.includes(err?.response?.status)) {
           return err.response;
         }
 
