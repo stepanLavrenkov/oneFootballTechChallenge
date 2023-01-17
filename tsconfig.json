@@ -1,9 +1,11 @@
 {
-    "exclude": ["node_modules"],
     "compilerOptions": {
-        "module": "CommonJS",
-        "strict": true,
-        "resolveJsonModule": true,
-        "baseUrl": "./",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "baseUrl": "src",
+    },
+    "exclude": ["node_modules"],
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
     }
-}
+  }
